@@ -53,12 +53,6 @@ Rfu = [line]
 Exc = [line]
 lineMID = line.getProfile().mid
 bot1 = line.getProfile().mid
-RfuBot=[lineMID]
-Family=["u010598af074d6d55419609ae63048a60",lineMID]
-admin=['u010598af074d6d55419609ae63048a60',lineMID]
-creator = ['u685ad88aa5fb8063548b887235dd1b88']
-line.sendMessage("uf4e5ed126182d0ddad1c770136598885", 'ดีคัฟ')
-RfuFamily = RfuBot + Family
 #ทำใว้เพือบับได้แจกบอทบิน55
 welcome = []
 autocancel = {}
@@ -69,21 +63,21 @@ msg_dict = {}
 settings1={
     "comment":"เจอคนอ่านเเว้วว",
     "autoLeavee": True,
-    "timeline": False,
-    "autoRead": False,
-    "contact": False,
+    "timeline": True,
+    "autoRead": True,
+    "contact": True,
     "bc": {},
 }
 
 settings = {
     "Wc": True,
-    "Lv": False,
-   "autoRead": False,
+    "Lv": True,
+   "autoRead": True,
     'autoCancel':{"on":True,"members":0},	
-   "autoJoin": False,
+   "autoJoin": True,
     "welcome":"",
-    "kick":"✧••••••••••❂✧✯✧❂•••••••••••✧",
-    "bye":"",    
+    "kick":True,
+    "bye":True,    
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
         "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
@@ -107,8 +101,8 @@ settings = {
         "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0"
     ],
     "mimic": {
-        "copy": False,
-        "status": False,
+        "copy": True,
+        "status": True,
         "target": {}
     }
 }
@@ -315,12 +309,12 @@ def mentionMembers(to, mid):
         line.sendMessage(to, "[ INFO ] Error :\n" + str(error))
 
 def myhelp():
-    myHelp = """
+    myHelp = "help"
     
 เปิดอ่าน/ปิดอ่าน
 แทค =แทคคนทั้งหมดในกลุ่ม
 
-"""
+
     return myHelp
 
 
